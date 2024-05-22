@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPlanet - Productos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="logo de la pagina/OIG2.jpeg" alt="Pagina"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ofertas.html">Ofertas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="acerca.html">Acerca de</a>
+                        </li>
+                        <!-- Carrito -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Carrito
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <ul id="cart-items" class="dropdown-item"></ul>
+                                <p class="dropdown-item">Total: <span id="cart-total-price">$0.00</span></p>
+                                <button onclick="checkout()" class="dropdown-item">Pagar</button>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="container">
+            <h1>Todos los Productos</h1>
+            <!-- Botones de filtro por categoría -->
+            <div class="text-center mb-4">
+                <button class="btn btn-primary mx-2" onclick="filterProducts('todos')">Todos</button>
+                <button class="btn btn-primary mx-2" onclick="filterProducts('Placas_madres')">Placas Madre</button>
+                <button class="btn btn-primary mx-2" onclick="filterProducts('Procesadores')">Procesadores</button>
+                <button class="btn btn-primary mx-2" onclick="filterProducts('Memorias Ram')">Memorias Ram</button>
+                <button class="btn btn-primary mx-2" onclick="filterProducts('Tarjetas de video')">Tarjetas de video</button>
+                <button class="btn btn-primary mx-2" onclick="filterProducts('Fuentes de poder')">Fuentes de poder</button>
+                <button class="btn btn-primary mx-2" onclick="filterProducts('Gabinetes')">Gabinetes</button>
+                <button class="btn btn-primary mx-2" onclick="filterProducts('Notebooks')">Notebooks</button>
+                <button class="btn btn-primary mx-2" onclick="filterProducts('Consolas')">Consolas</button> 
+            </div>
+            <div class="product-grid">
+
+
+                <!--Categoria de Placas -->
+
+                <div class="product" data-category="Placas_madres">
+                    <!-- Producto 1 -->
+                    <img src="productos/placas madres/AMD A520M-A Prime II (AM4).jpg" alt="AMD A520M-A Prime II (AM4)">
+                    <h2>AMD A520M-A Prime II</h2>
+                    <p>$105.290</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Placas_madres">
+                    <!-- Producto 1 -->
+                    <img src="productos/placas madres/AMD A520M-K Prime (AM4).jpg" alt="AMD A520M-K Prime (AM4)">
+                    <h2>AMD A520M-K Prime (AM4)</h2>
+                    <p>$99.990</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Placas_madres">
+                    <!-- Producto 1 -->
+                    <img src="productos/placas madres/AMD A620M H G10 (AM5).jpg" alt="AMD A620M H G10 (AM5)">
+                    <h2>AMD A620M H G10 (AM5)</h2>
+                    <p>$133.990</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Placas_madres">
+                    <!-- Producto 1 -->
+                    <img src="productos/placas madres/AMD X670E-PLUS TUF Gaming WIFI (AM5).jpg" alt="AMD X670E-PLUS TUF Gaming WIFI (AM5)">
+                    <h2>AMD X670E-PLUS TUF Gaming WIFI (AM5)</h2>
+                    <p>$418.690</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Placas_madres">
+                    <!-- Producto 1 -->
+                    <img src="productos/placas madres/Intel H610M K DDR4 (s1700).jpg" alt="Intel H610M K DDR4 (s1700)">
+                    <h2>Intel H610M K DDR4 (s1700)</h2>
+                    <p>$102.990</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Placas_madres">
+                    <!-- Producto 1 -->
+                    <img src="productos/placas madres/Intel B760M Aorus Elite AX (DDR5) (s1700).jpg" alt="Intel B760M Aorus Elite AX (DDR5) (s1700)">
+                    <h2>Intel B760M Aorus Elite AX (DDR5) (s1700)</h2>
+                    <p>$249.990.000</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+
+                <!--Categoria de Procesadores -->
+
+
+                <div class="product" data-category="Procesadores">
+                    <!-- Producto 2 -->
+                    <img src="productos/procesadores/CPU Intel Core i5-14400F (s1700).jpg" alt="CPU Intel Core i5-14400F (s1700)">
+                    <h2>CPU Intel Core i5-14400F (s1700)</h2>
+                    <p>$267.990</p>
+                    <button onclick="addToCart('Producto 2', 200000, 'producto2.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Procesadores">
+                    <!-- Producto 2 -->
+                    <img src="productos/procesadores/CPU Intel Core i9-14900K (s1700).jpg" alt="CPU Intel Core i9-14900K (s1700)">
+                    <h2>CPU Intel Core i9-14900K (s1700)</h2>
+                    <p>$752.590</p>
+                    <button onclick="addToCart('Producto 2', 200000, 'producto2.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Procesadores">
+                    <!-- Producto 2 -->
+                    <img src="productos/procesadores/CPU Ryzen 5 5600G (AM4).jpg" alt="CPU Ryzen 5 5600G (AM4)">
+                    <h2>CPU Ryzen 5 5600G (AM4)</h2>
+                    <p>$162.990</p>
+                    <button onclick="addToCart('Producto 2', 200000, 'producto2.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Procesadores">
+                    <!-- Producto 2 -->
+                    <img src="productos/procesadores/CPU Ryzen 7 5700X3D (AM4).jpg" alt="CPU Ryzen 7 5700X3D (AM4)">
+                    <h2>CPU Ryzen 7 5700X3D (AM4)</h2>
+                    <p>$329.890</p>
+                    <button onclick="addToCart('Producto 2', 200000, 'producto2.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Procesadores">
+                    <!-- Producto 2 -->
+                    <img src="productos/procesadores/CPU Ryzen 5 8500G (AM5).jpg" alt="CPU Ryzen 5 8500G (AM5)">
+                    <h2>CPU Ryzen 5 8500G (AM5)</h2>
+                    <p>$242.290</p>
+                    <button onclick="addToCart('Producto 2', 200000, 'producto2.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Procesadores">
+                    <!-- Producto 2 -->
+                    <img src="productos/procesadores/CPU Ryzen 9 7950X3D (AM5).jpg" alt="CPU Ryzen 9 7950X3D (AM5)">
+                    <h2>CPU Ryzen 9 7950X3D (AM5)</h2>
+                    <p>$793.790</p>
+                    <button onclick="addToCart('Producto 2', 200000, 'producto2.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <!--Categoria Memoria Ram-->
+
+                <div class="product" data-category="Memorias Ram">
+                    <!-- Producto 2 -->
+                    <img src="productos/Memorias Ram/DDR4 8GB 3200MHz Beast White RGB.jpg" alt="DDR4 8GB 3200MHz Beast White RGB">
+                    <h2>DDR4 8GB 3200MHz Beast White RGB</h2>
+                    <p>$29.890</p>
+                    <button onclick="addToCart('Producto 2', 200000, 'producto2.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Memorias Ram">
+                    <!-- Producto 2 -->
+                    <img src="productos/Memorias Ram/DDR4 16GB 3200MHz Beast White RGB.jpg" alt="DDR4 16GB 3200MHz Beast White RGB">
+                    <h2>DDR4 16GB 3200MHz Beast White RGB</h2>
+                    <p>$56.690</p>
+                    <button onclick="addToCart('Producto 2', 200000, 'producto2.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Memorias Ram">
+                    <!-- Producto 2 -->
+                    <img src="productos/Memorias Ram/DDR4 32GB 3600MHz Beast RGB.jpg" alt="DDR4 32GB 3600MHz Beast RGB">
+                    <h2>DDR4 32GB 3600MHz Beast RGB</h2>
+                    <p>$102.405</p>
+                    <button onclick="addToCart('Producto 2', 200000, 'producto2.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Memorias Ram">
+                    <!-- Producto 2 -->
+                    <img src="productos/Memorias Ram/DDR5 8GB 5200MHz Beast.jpg" alt="DDR5 8GB 5200MHz Beast">
+                    <h2>DDR5 8GB 5200MHz Beast</h2>
+                    <p>$38.190</p>
+                    <button onclick="addToCart('Producto 2', 200000, 'producto2.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Memorias Ram">
+                    <!-- Producto 2 -->
+                    <img src="productos/Memorias Ram/DDR5 16GB 5600MHz Beast.jpg" alt="DDR5 16GB 5600MHz Beast">
+                    <h2>DDR5 16GB 5600MHz Beast</h2>
+                    <p>$81.390</p>
+                    <button onclick="addToCart('Producto 2', 200000, 'producto2.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Memorias Ram">
+                    <!-- Producto 2 -->
+                    <img src="productos/Memorias Ram/DDR5 32GB 5600MHz Beast.jpg" alt="DDR5 32GB 5600MHz Beast">
+                    <h2>DDR5 32GB 5600MHz Beast</h2>
+                    <p>$165.090</p>
+                    <button onclick="addToCart('Producto 2', 200000, 'producto2.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <!--Categoria SSD M.2-->
+
+                <div class="product" data-category="Tarjetas de video">
+                    <!-- Producto 1 -->
+                    <img src="productos/tarjetas graficas/Video AMD Radeon RX 6600 8GB Pulse.jpg" alt="Video AMD Radeon RX 6600 8GB">
+                    <h2>Video AMD Radeon RX 6600 8GB</h2>
+                    <p>$100.000</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Tarjetas de video">
+                    <!-- Producto 1 -->
+                    <img src="productos/tarjetas graficas/Video AMD Pure RX 7800 XT Gaming OC 16GB GDDR6 Dual HDMI.jpg" alt="Video AMD Pure RX 7800 XT Gaming OC 16GB GDDR6 Dual HDMI">
+                    <h2>Video AMD Pure RX 7800 XT Gaming OC 16GB GDDR6 Dual HDMI</h2>
+                    <p>$100.000</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Tarjetas de video">
+                    <!-- Producto 1 -->
+                    <img src="productos/tarjetas graficas/Video AMD Radeon RX 7900XT O20GB TUF Gaming GDDR6.jpg" alt="Video AMD Radeon RX 7900XT O20GB TUF Gaming GDDR6">
+                    <h2>Video AMD Radeon RX 7900XT O20GB TUF Gaming GDDR6</h2>
+                    <p>$100.000</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Tarjetas de video">
+                    <!-- Producto 1 -->
+                    <img src="productos/tarjetas graficas/Video NVIDIA GeForce GTX1660S O6GB Phoenix.jpg" alt="Video NVIDIA GeForce GTX1660S O6GB Phoenix">
+                    <h2>Video NVIDIA GeForce GTX1660S O6GB Phoenix</h2>
+                    <p>$100.000</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Tarjetas de video">
+                    <!-- Producto 1 -->
+                    <img src="productos/tarjetas graficas/Video NVIDIA GeForce RTX4060 DUAL 8GB GDDR6 128bit 3-DP HDMI.jpg" alt="Video NVIDIA GeForce RTX4060 DUAL 8GB GDDR6 128bit 3-DP HDMI">
+                    <h2>Video NVIDIA GeForce RTX4060 DUAL 8GB GDDR6 128bit 3-DP HDMI</h2>
+                    <p>$100.000</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Tarjetas de video">
+                    <!-- Producto 1 -->
+                    <img src="productos/tarjetas graficas/Video NVIDIA GeForce RTX4090 O24GB TUF Gaming.jpg" alt="Video NVIDIA GeForce RTX4090 O24GB TUF Gaming">
+                    <h2>Video NVIDIA GeForce RTX4090 O24GB TUF Gaming</h2>
+                    <p>$100.000</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <!--Categoria fuentes de poder-->
+
+                <div class="product" data-category="Fuentes de poder">
+                    <!-- Producto 1 -->
+                    <img src="productos/Fuentes de poder/Fuente de Poder 500W 80Plus Bronze PK500D.jpg" alt="Fuente de Poder 500W 80Plus Bronze PK500D">
+                    <h2>Fuente de Poder 500W 80Plus Bronze PK500D</h2>
+                    <p>$100.000</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Fuentes de poder">
+                    <!-- Producto 1 -->
+                    <img src="productos/Fuentes de poder/Fuente de Poder 600W 80Plus Bronze PK600D.jpg" alt="Fuente de Poder 600W 80Plus Bronze PK600D">
+                    <h2>Fuente de Poder 600W 80Plus Bronze PK600D</h2>
+                    <p>$100.000</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Fuentes de poder">
+                    <!-- Producto 1 -->
+                    <img src="productos/Fuentes de poder/Fuente de Poder 700W 80Plus Bronze.jpg" alt="Fuente de Poder 700W 80Plus Bronze">
+                    <h2>Fuente de Poder 700W 80Plus Bronze</h2>
+                    <p>$100.000</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Fuentes de poder">
+                    <!-- Producto 1 -->
+                    <img src="productos/Fuentes de poder/Fuente de Poder 1000W 80Plus Platinum Fully Modular - ROG THOR.jpg" alt="Fuente de Poder 1000W 80Plus Platinum Fully Modular - ROG THOR">
+                    <h2>Fuente de Poder 1000W 80Plus Platinum Fully Modular - ROG THOR</h2>
+                    <p>$100.000</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Fuentes de poder">
+                    <!-- Producto 1 -->
+                    <img src="productos/Fuentes de poder/Fuente de Poder 1200W 80Plus Platinum Fully Modular - ROG THOR.jpg" alt="Fuente de Poder 1200W 80Plus Platinum Fully Modular - ROG THOR">
+                    <h2>Fuente de Poder 1200W 80Plus Platinum Fully Modular - ROG THOR</h2>
+                    <p>$100.000</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Fuentes de poder">
+                    <!-- Producto 1 -->
+                    <img src="productos/Fuentes de poder/Fuente de Poder 1300W 80Plus Gold Fully Modular.jpg" alt="Fuente de Poder 1300W 80Plus Gold Fully Modular">
+                    <h2>Fuente de Poder 1300W 80Plus Gold Fully Modular</h2>
+                    <p>$100.000</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <!--Gabinetes-->
+
+                <div class="product" data-category="Gabinetes">
+                    <!-- Producto 1 -->
+                    <img src="productos/Gabinetes/Gabinete mATX Matrexx 30.jpg" alt="Gabinete mATX Matrexx 30">
+                    <h2>Gabinete mATX Matrexx 30</h2>
+                    <p>$100.000</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Gabinetes">
+                    <!-- Producto 1 -->
+                    <img src="productos/Gabinetes/Gabinete ATX CC560.jpg" alt=Gabinete ATX CC560">
+                    <h2>Gabinete ATX CC560</h2>
+                    <p>$100.000</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Gabinetes">
+                    <!-- Producto 1 -->
+                    <img src="productos/Gabinetes/Gabinete E-ATX CH510 Blanco.jpg" alt="Gabinete E-ATX CH510 Blanco">
+                    <h2>Gabinete E-ATX CH510 Blanco</h2>
+                    <p>$100.000</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Gabinetes">
+                    <!-- Producto 1 -->
+                    <img src="productos/Gabinetes/Gabinete E-ATX Talos P1A.jpg" alt="Gabinete E-ATX Talos P1A">
+                    <h2>Gabinete E-ATX Talos P1A</h2>
+                    <p>$100.000</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Gabinetes">
+                    <!-- Producto 1 -->
+                    <img src="productos/Gabinetes/Gabinete ATX TUF Gaming GT301.jpg" alt="Gabinete ATX TUF Gaming GT301">
+                    <h2>Gabinete ATX TUF Gaming GT301</h2>
+                    <p>$100.000</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Gabinetes">
+                    <!-- Producto 1 -->
+                    <img src="productos/Gabinetes/Gabinete ATX iCUE 4000D A-RGB Airflow.jpg" alt="Gabinete ATX iCUE 4000D A-RGB Airflow">
+                    <h2>Gabinete ATX iCUE 4000D A-RGB Airflow</h2>
+                    <p>$100.000</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <!--Categoria Notebooks-->
+
+                <div class="product" data-category="Notebooks">
+                    <!-- Producto 1 -->
+                    <img src="productos/notebooks/Notebook Ideapad 3 Slim Gen 8 Intel Core i3-N305.jpg" alt="Notebook Ideapad 3 Slim Gen 8 Intel Core i3-N305">
+                    <h2>Notebook Ideapad 3 Slim Gen 8 Intel Core i3-N305</h2>
+                    <p>$100.000</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Notebooks">
+                    <!-- Producto 1 -->
+                    <img src="productos/notebooks/Notebook Ideapad Slim 3 Ryzen 3 7320U.jpg" alt="Notebook Ideapad Slim 3 Ryzen 3 7320U">
+                    <h2>Notebook Ideapad Slim 3 Ryzen 3 7320U</h2>
+                    <p>$100.000</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Notebooks">
+                    <!-- Producto 1 -->
+                    <img src="productos/notebooks/Notebook Aspire 3 AMD Ryzen 5 7520U.jpg" alt="Notebook Aspire 3 AMD Ryzen 5 7520U">
+                    <h2>Notebook Aspire 3 AMD Ryzen 5 7520U</h2>
+                    <p>$100.000</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Notebooks">
+                    <!-- Producto 1 -->
+                    <img src="productos/notebooks/Notebook Gamer Katana Intel Core i7-12650H NVIDIA RTX4070.jpg" alt="Notebook Gamer Katana Intel Core i7-12650H NVIDIA RTX4070">
+                    <h2>Notebook Gamer Katana Intel Core i7-12650H NVIDIA RTX4070</h2>
+                    <p>$100.000</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Notebooks">
+                    <!-- Producto 1 -->
+                    <img src="productos/notebooks/Notebook ROG Strix G16 Intel Core i9 14900HX NVIDIA GeForce RTX 4060.jpg" alt="Notebook ROG Strix G16 Intel Core i9 14900HX NVIDIA GeForce RTX 4060">
+                    <h2>Notebook ROG Strix G16 Intel Core i9 14900HX NVIDIA GeForce RTX 4060</h2>
+                    <p>$100.000</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Notebooks">
+                    <!-- Producto 1 -->
+                    <img src="productos/notebooks/Notebook Gamer ROG Strix SCAR 18 Intel Core i9 14900HX.jpg" alt="Notebook Gamer ROG Strix SCAR 18 Intel Core i9 14900HX">
+                    <h2>Notebook Gamer ROG Strix SCAR 18 Intel Core i9 14900HX</h2>
+                    <p>$100.000</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <!--Categoria Consolas-->
+
+                <div class="product" data-category="Consolas">
+                    <!-- Producto 1 -->
+                    <img src="productos/Consolas/Consola_Xbox_Series_S.jpg" alt="Consola_Xbox_Series_S">
+                    <h2>Consola_Xbox_Series_S</h2>
+                    <p>$100.000</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Consolas">
+                    <!-- Producto 1 -->
+                    <img src="productos/Consolas/Consola_Xbox_Series_X.jpg" alt="Consola_Xbox_Series_X.jpg">
+                    <h2>Consola_Xbox_Series_X.jpg</h2>
+                    <p>$100.000</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Consolas">
+                    <!-- Producto 1 -->
+                    <img src="productos/Consolas/Consola_Xbox_Series_S_Carbon_Black.jpg" alt="Consola_Xbox_Series_S_Carbon_Black">
+                    <h2>Consola_Xbox_Series_S_Carbon_Black</h2>
+                    <p>$100.000</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Consolas">
+                    <!-- Producto 1 -->
+                    <img src="productos/Consolas/Consola_Nintendo_Switch_Lite_Turquoise__Animal_Crossing.jpg" alt="Consola_Nintendo_Switch_Lite_Turquoise__Animal_Crossing">
+                    <h2>Consola_Nintendo_Switch_Lite_Turquoise__Animal_Crossing</h2>
+                    <p>$100.000</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Consolas">
+                    <!-- Producto 1 -->
+                    <img src="productos/Consolas/Consola_Nintendo_Switch_OLED_con_Joy-Con_Blanco.jpg" alt="Consola_Nintendo_Switch_OLED_con_Joy-Con_Blanco">
+                    <h2>Consola_Nintendo_Switch_OLED_con_Joy-Con_Blanco</h2>
+                    <p>$100.000</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" data-category="Consolas">
+                    <!-- Producto 1 -->
+                    <img src="productos/Consolas/Consola_PlayStation_5_HW_Slim_Standar_Superbundle.jpg" alt="Consola_PlayStation_5_HW_Slim_Standar_Superbundle">
+                    <h2>Consola_PlayStation_5_HW_Slim_Standar_Superbundle</h2>
+                    <p>$100.000</p>
+                    <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">Agregar al Carrito</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 TechPlanet. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <script>
+        let cart = [];
+        let totalPrice = 0;
+    
+        function addToCart(productName, productPrice, imageUrl) {
+            cart.push({ name: productName, price: productPrice, imageUrl: imageUrl });
+            totalPrice += productPrice;
+            updateCart();
+        }
+    
+        function updateCart() {
+            const cartItemsElement = document.getElementById('cart-items');
+            cartItemsElement.innerHTML = '';
+            cart.forEach((item, index) => {
+                const li = document.createElement('li');
+                const img = document.createElement('img');
+                img.src = item.imageUrl;
+                img.alt = item.name;
+                img.style.width = '100px';
+                img.style.height = '100px';
+                li.appendChild(img);
+                const text = document.createElement('span');
+                const priceWithoutDecimals = Math.floor(item.price); 
+                text.textContent = `${item.name} - $${priceWithoutDecimals.toLocaleString('es-CL', {style: 'currency', currency: 'CLP'})}`; 
+                li.appendChild(text);
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'x';
+                removeButton.classList.add('btn', 'btn-danger', 'btn-sm', 'ml-2'); 
+                removeButton.onclick = () => removeFromCart(index); 
+                li.appendChild(removeButton);
+                cartItemsElement.appendChild(li);
+            });
+            const totalPriceWithoutDecimals = Math.floor(totalPrice); 
+            document.getElementById('cart-total-price').textContent = `$${totalPriceWithoutDecimals.toLocaleString('es-CL', {style: 'currency', currency: 'CLP'})}`; 
+        }
+    
+        function removeFromCart(index) {
+            const removedItem = cart.splice(index, 1)[0]; 
+            totalPrice -= removedItem.price; 
+            updateCart(); 
+        }
+    
+        function checkout() {
+            alert('Checkout: Total a pagar - $' + totalPrice.toFixed(2));
+        }
+    
+        function filterProducts(category) {
+            const products = document.querySelectorAll('.product');
+            products.forEach(product => {
+                const productCategory = product.dataset.category;
+                if (category === 'todos' || productCategory === category) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+    </script>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPlanet - Inicio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="logo de la pagina/OIG2.jpeg" alt="TechPlanet"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ofertas.html">Ofertas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="acerca.html">Acerca de</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Carrito
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <ul id="cart-items" class="dropdown-item"></ul>
+                                <p class="dropdown-item">Total: <span id="cart-total-price">$0.00</span></p>
+                                <button onclick="checkout()" class="dropdown-item">Pagar</button>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="container">
+            <h1>Productos Destacados</h1>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="carrusel/1_8868.png" alt="Producto 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="carrusel/7_824.jpg" alt="Producto 2">
+                    </div>
+                    <!-- Agrega más imágenes aquí -->
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+            <div class="product-grid">
+                <!-- Lista de productos -->
+                <div class="product">
+                    <img src="productos destacados/play 5.jpg" alt="Consola PlayStation 5">
+                    <h2>Consola PlayStation 5 HW Slim Standart Superbundle</h2>
+                    <p>$639.990</p>
+                    <button onclick="addToCart('Consola PlayStation 5 HW Slim Standart Superbundle', 639990, 'productos destacados/play 5.jpg')">Agregar al Carrito</button>
+                </div>                
+                <div class="product">
+                    <img src="productos destacados/logitech.jpg" alt="Logitech®Mouses">
+                    <h2>Mouse Gamer G305 Ligthspeed Wireless Negro</h2>
+                    <p>$42.990</p>
+                    <button onclick="addToCart('Mouse Gamer G305 Ligthspeed Wireless Negro', 42990, 'productos destacados/logitech.jpg')">Agregar al Carrito</button>
+                </div>
+                <div class="product">
+                    <img src="productos destacados/logitech teclado.jpg" alt="Logitech®Teclados">
+                    <h2>Teclado Gamer G PRO Mecánico Inglés</h2>
+                    <p>$123.590</p>
+                    <button onclick="addToCart('Teclado Gamer G PRO Mecánico Inglés', 123590, 'productos destacados/logitech teclado.jpg')">Agregar al Carrito</button>
+                </div>
+                <div class="product">
+                    <img src="productos destacados/Nintendo switch.jpg" alt="Nintendo®Consolas">
+                    <h2>Consola Nintendo Switch Neon V2</h2>
+                    <p>$399.990</p>
+                    <button onclick="addToCart('Consola Nintendo Switch Neon V2', 399990, 'productos destacados/Nintendo switch.jpg')">Agregar al Carrito</button>
+                </div>
+                <div class="product">
+                    <img src="productos destacados/mouse hyperx.jpg" alt="HyperX®Mouses">
+                    <h2>Mouse Gamer HyperX Pulsefire Haste 2 Wireless White</h2>
+                    <p>$84.590</p>
+                    <button onclick="addToCart('Mouse Gamer HyperX Pulsefire Haste 2 Wireless White', 84590, 'productos destacados/mouse hyperx.jpg')">Agregar al Carrito</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 TechPlanet. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <script>
+        let cart = [];
+        let totalPrice = 0;
+    
+        function addToCart(productName, productPrice, imageUrl) {
+            cart.push({ name: productName, price: productPrice, imageUrl: imageUrl });
+            totalPrice += productPrice;
+            updateCart();
+        }
+    
+        function updateCart() {
+    const cartItemsElement = document.getElementById('cart-items');
+    cartItemsElement.innerHTML = '';
+    cart.forEach((item, index) => {
+        const li = document.createElement('li');
+        const img = document.createElement('img');
+        img.src = item.imageUrl;
+        img.alt = item.name;
+        img.style.width = '100px';
+        img.style.height = '100px';
+        li.appendChild(img);
+        const text = document.createElement('span');
+        const priceWithoutDecimals = Math.floor(item.price); 
+        text.textContent = `${item.name} - $${priceWithoutDecimals.toLocaleString('es-CL', {style: 'currency', currency: 'CLP'})}`; 
+        li.appendChild(text);
+        const removeButton = document.createElement('button');
+        removeButton.textContent = 'x';
+        removeButton.classList.add('btn', 'btn-danger', 'btn-sm', 'ml-2'); 
+        removeButton.onclick = () => removeFromCart(index); 
+        li.appendChild(removeButton);
+        cartItemsElement.appendChild(li);
+    });
+    const totalPriceWithoutDecimals = Math.floor(totalPrice); 
+    document.getElementById('cart-total-price').textContent = `$${totalPriceWithoutDecimals.toLocaleString('es-CL', {style: 'currency', currency: 'CLP'})}`; 
+}
+
+
+
+
+
+function removeFromCart(index) {
+    const removedItem = cart.splice(index, 1)[0]; 
+    totalPrice -= removedItem.price; 
+    updateCart(); 
+}
+
+
+
+    
+        function checkout() {
+            alert('Checkout: Total a pagar - $' + totalPrice.toFixed(2));
+        }
+    </script>
+    
+    
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
